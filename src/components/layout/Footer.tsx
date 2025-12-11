@@ -1,4 +1,4 @@
-import { Cpu, Github, Linkedin, Mail, Twitter, Phone, MapPin } from "lucide-react"
+import { Cpu, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
 const Footer = () => {
   return (
@@ -44,14 +44,11 @@ const Footer = () => {
                 Hernandarias - Alto Parana
               </li>
               <li className="flex gap-4 mt-4">
-                <a href="#" className="bg-white/5 p-2 rounded-full hover:bg-primary-cyan/20 hover:text-primary-cyan transition-colors">
+                <a href="https://www.linkedin.com/in/juan-carlos-piris-sanchez-a7a724162/" target="_blank" rel="noopener noreferrer" className="bg-white/5 p-2 rounded-full hover:bg-primary-cyan/20 hover:text-primary-cyan transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="bg-white/5 p-2 rounded-full hover:bg-primary-cyan/20 hover:text-primary-cyan transition-colors">
+                <a href="https://github.com/jctec050-stack" target="_blank" rel="noopener noreferrer" className="bg-white/5 p-2 rounded-full hover:bg-primary-cyan/20 hover:text-primary-cyan transition-colors">
                   <Github className="w-5 h-5" />
-                </a>
-                <a href="#" className="bg-white/5 p-2 rounded-full hover:bg-primary-cyan/20 hover:text-primary-cyan transition-colors">
-                  <Twitter className="w-5 h-5" />
                 </a>
               </li>
             </ul>
