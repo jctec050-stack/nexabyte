@@ -1,4 +1,4 @@
-import { Cpu, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
 const Footer = () => {
   return (
@@ -7,7 +7,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Cpu className="w-8 h-8 text-primary-cyan" />
+              <div className="w-8 h-8 relative">
+                <img src="/logo.png" alt="NEXABYTE Logo" className="w-full h-full object-contain" />
+              </div>
               <span className="text-2xl font-bold tracking-wider text-white">
                 NEXA<span className="text-primary-cyan">BYTE</span>
               </span>

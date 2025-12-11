@@ -18,15 +18,13 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <div className="w-24 h-24 mx-auto mb-6 relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-cyan to-primary-purple rounded-xl rotate-45 blur-xl opacity-50 animate-pulse" />
-              <div className="relative bg-background border border-white/10 p-4 rounded-xl rotate-45 flex items-center justify-center">
-                <div className="-rotate-45">
-                  <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-cyan to-primary-purple">
-                    NB
-                  </div>
-                </div>
-              </div>
+            <div className="w-32 h-32 mx-auto mb-6 relative">
+              <div className="absolute inset-0 bg-primary-cyan/20 blur-2xl rounded-full opacity-50 animate-pulse" />
+              <img 
+                src="/logo.png" 
+                alt="NEXABYTE Logo" 
+                className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_15px_rgba(0,212,255,0.5)]" 
+              />
             </div>
           </motion.div>
 

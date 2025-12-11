@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { Menu, X, Cpu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
@@ -39,9 +39,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="relative">
-            <Cpu className="w-8 h-8 text-primary-cyan group-hover:text-primary-purple transition-colors duration-300" />
-            <div className="absolute inset-0 bg-primary-cyan/50 blur-lg rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
+          <div className="relative w-10 h-10">
+            <img src="/logo.png" alt="NEXABYTE Logo" className="w-full h-full object-contain" />
+            <div className="absolute inset-0 bg-primary-cyan/50 blur-lg rounded-full opacity-0 group-hover:opacity-50 transition-opacity -z-10" />
           </div>
           <span className="text-2xl font-bold tracking-wider text-white">
             NEXA<span className="text-primary-cyan">BYTE</span>
