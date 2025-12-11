@@ -37,7 +37,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold">Email</h3>
-                  <p className="text-text-muted">info@nexabyte.com</p>
+                  <p className="text-text-muted">jctec050@gmail.com</p>
                 </div>
               </Card>
 
@@ -47,7 +47,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold">Teléfono</h3>
-                  <p className="text-text-muted">+1 234 567 890</p>
+                  <p className="text-text-muted">+595 976 392 214</p>
                 </div>
               </Card>
 
@@ -57,7 +57,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold">Ubicación</h3>
-                  <p className="text-text-muted">Ciudad Tecnológica, Edificio Innovation</p>
+                  <p className="text-text-muted">Hernandarias - Alto Parana</p>
                 </div>
               </Card>
             </div>
@@ -65,7 +65,7 @@ const Contact = () => {
             <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-primary-cyan/10 to-primary-purple/10 border border-white/10">
               <h3 className="font-bold mb-2">Horario de Atención</h3>
               <p className="text-text-muted">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-              <p className="text-text-muted">Sábados: 9:00 AM - 1:00 PM</p>
+              <p className="text-text-muted">Sábados: 9:00 AM - 6:00 PM</p>
             </div>
           </motion.div>
 
