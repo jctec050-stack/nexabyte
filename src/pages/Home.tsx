@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { ArrowRight, Code, Database, Shield, Smartphone } from "lucide-react"
+import { ArrowRight, Code, Database, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
 import { Link } from "react-router-dom"
@@ -73,7 +73,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="hover:border-primary-cyan/50 group cursor-pointer">
               <Code className="w-12 h-12 text-primary-cyan mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-bold mb-2">Desarrollo Web</h3>
@@ -90,12 +90,6 @@ const Home = () => {
               <Database className="w-12 h-12 text-primary-cyan mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-bold mb-2">Consultoría IT</h3>
               <p className="text-text-muted text-sm">Asesoramiento experto para optimizar tus procesos tecnológicos.</p>
-            </Card>
-
-            <Card className="hover:border-primary-purple/50 group cursor-pointer">
-              <Shield className="w-12 h-12 text-primary-purple mb-4 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-xl font-bold mb-2">Ciberseguridad</h3>
-              <p className="text-text-muted text-sm">Protección avanzada para tus datos y sistemas empresariales.</p>
             </Card>
           </div>
           

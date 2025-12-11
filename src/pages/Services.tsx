@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Code, Smartphone, Database, Shield, Cloud, Settings, Layout, Search, ArrowRight } from "lucide-react"
+import { Code, Smartphone, Settings, Layout, ArrowRight } from "lucide-react"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Link } from "react-router-dom"
@@ -18,34 +18,10 @@ const services = [
     features: ["iOS & Android", "React Native / Flutter", "UI/UX Móvil", "Mantenimiento de Apps"]
   },
   {
-    icon: Cloud,
-    title: "Cloud Solutions",
-    description: "Infraestructura escalable y segura en la nube para potenciar tu negocio.",
-    features: ["AWS / Azure / GCP", "Migración a la Nube", "Serverless Architecture", "DevOps"]
-  },
-  {
-    icon: Shield,
-    title: "Ciberseguridad",
-    description: "Protegemos tus activos digitales contra amenazas y vulnerabilidades.",
-    features: ["Auditoría de Seguridad", "Pentesting", "Protección de Datos", "Cumplimiento Normativo"]
-  },
-  {
-    icon: Database,
-    title: "Base de Datos",
-    description: "Diseño y administración de bases de datos robustas y de alto rendimiento.",
-    features: ["SQL & NoSQL", "Optimización de Consultas", "Backup & Recovery", "Migración de Datos"]
-  },
-  {
     icon: Layout,
     title: "Diseño UI/UX",
     description: "Interfaces intuitivas y atractivas que mejoran la experiencia del usuario.",
     features: ["Prototipado", "Wireframing", "Diseño Visual", "User Testing"]
-  },
-  {
-    icon: Search,
-    title: "SEO & Marketing",
-    description: "Estrategias digitales para mejorar tu visibilidad y alcance en línea.",
-    features: ["SEO On-page/Off-page", "Marketing de Contenidos", "Analítica Web", "SEM"]
   },
   {
     icon: Settings,
