@@ -126,13 +126,18 @@ const Home = () => {
                 <Button variant="secondary">Contáctanos</Button>
               </Link>
             </div>
-            <div className="flex-1 relative">
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary-cyan/20 flex items-center justify-center bg-[#050A18]">
-                <img 
-                  src="/logo.png" 
-                  alt="NEXABYTE Logo" 
-                  className="w-full h-full object-contain p-4"
-                />
+            <div className="flex-1 relative flex items-center justify-center py-12">
+              <div className="w-64 h-64 relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary-cyan to-primary-purple rounded-3xl rotate-45 blur-2xl opacity-40 animate-pulse" />
+                <div className="relative bg-background border border-white/10 w-full h-full rounded-3xl rotate-45 flex items-center justify-center shadow-2xl shadow-primary-cyan/20">
+                  <div className="-rotate-45 w-full h-full flex items-center justify-center p-8">
+                    <img 
+                      src="/logo.png" 
+                      alt="NEXABYTE Logo" 
+                      className="w-full h-full object-contain" 
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
