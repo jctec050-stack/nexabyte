@@ -21,9 +21,9 @@ const Contact = () => {
     // Sign up at https://www.emailjs.com/
     const SERVICE_ID = "service_hsdjbrs"
     const TEMPLATE_ID = "template_d2xs33f"
-    const PUBLIC_KEY = "YOUR_PUBLIC_KEY"
+    const PUBLIC_KEY = "a8gXRzZvudm2wGbTq"
 
-    if (PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
+    if (false) {
       setLoading(false)
       setError("Falta configurar la Public Key de EmailJS.")
       return
