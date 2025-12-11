@@ -1,9 +1,49 @@
+import { useRef, useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react"
+import emailjs from '@emailjs/browser'
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null)
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState("")
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    setError("")
+    setSuccess(false)
+
+    // REPLACE THESE WITH YOUR ACTUAL EMAILJS SERVICE ID, TEMPLATE ID, AND PUBLIC KEY
+    // Sign up at https://www.emailjs.com/
+    const SERVICE_ID = "YOUR_SERVICE_ID"
+    const TEMPLATE_ID = "YOUR_TEMPLATE_ID"
+    const PUBLIC_KEY = "YOUR_PUBLIC_KEY"
+
+    if (SERVICE_ID === "YOUR_SERVICE_ID") {
+      setLoading(false)
+      setError("Por favor configura tus credenciales de EmailJS en el código.")
+      return
+    }
+
+    if (formRef.current) {
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+        .then(() => {
+          setSuccess(true)
+          formRef.current?.reset()
+        })
+        .catch(() => {
+          setError("Hubo un error al enviar el mensaje. Por favor intenta nuevamente.")
+        })
+        .finally(() => {
+          setLoading(false)
+        })
+    }
+  }
+
   return (
     <div className="pt-24 pb-16 min-h-screen relative overflow-hidden">
        {/* Background elements */}
@@ -77,12 +117,14 @@ const Contact = () => {
           >
             <Card className="p-8">
               <h2 className="text-2xl font-bold mb-6">Envíanos un Mensaje</h2>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" ref={formRef} onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Nombre</label>
                     <input 
+                      name="user_name"
                       type="text" 
+                      required
                       className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary-cyan transition-colors"
                       placeholder="Tu nombre"
                     />
@@ -90,7 +132,9 @@ const Contact = () => {
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Email</label>
                     <input 
+                      name="user_email"
                       type="email" 
+                      required
                       className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary-cyan transition-colors"
                       placeholder="tu@email.com"
                     />
@@ -99,25 +143,48 @@ const Contact = () => {
                 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Asunto</label>
-                  <select className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary-cyan transition-colors text-text-muted">
-                    <option>Consulta General</option>
-                    <option>Presupuesto</option>
-                    <option>Soporte</option>
-                    <option>Otro</option>
+                  <select name="subject" className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary-cyan transition-colors text-text-muted">
+                    <option value="Consulta General">Consulta General</option>
+                    <option value="Presupuesto">Presupuesto</option>
+                    <option value="Soporte">Soporte</option>
+                    <option value="Otro">Otro</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Mensaje</label>
                   <textarea 
+                    name="message"
+                    required
                     className="w-full bg-background/50 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary-cyan transition-colors h-32 resize-none"
                     placeholder="Cuéntanos sobre tu proyecto..."
                   />
                 </div>
 
-                <Button className="w-full group">
-                  Enviar Mensaje
-                  <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                {success && (
+                  <div className="bg-green-500/10 border border-green-500/20 text-green-500 p-4 rounded-lg text-sm">
+                    ¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.
+                  </div>
+                )}
+
+                {error && (
+                  <div className="bg-red-500/10 border border-red-500/20 text-red-500 p-4 rounded-lg text-sm">
+                    {error}
+                  </div>
+                )}
+
+                <Button className="w-full group" disabled={loading}>
+                  {loading ? (
+                    <>
+                      Enviando...
+                      <Loader2 className="w-4 h-4 ml-2 animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      Enviar Mensaje
+                      <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
                 </Button>
               </form>
             </Card>
