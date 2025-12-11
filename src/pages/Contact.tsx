@@ -19,13 +19,13 @@ const Contact = () => {
 
     // REPLACE THESE WITH YOUR ACTUAL EMAILJS SERVICE ID, TEMPLATE ID, AND PUBLIC KEY
     // Sign up at https://www.emailjs.com/
-    const SERVICE_ID = "YOUR_SERVICE_ID"
-    const TEMPLATE_ID = "YOUR_TEMPLATE_ID"
+    const SERVICE_ID = "service_hsdjbrs"
+    const TEMPLATE_ID = "template_d2xs33f"
     const PUBLIC_KEY = "YOUR_PUBLIC_KEY"
 
-    if (SERVICE_ID === "YOUR_SERVICE_ID") {
+    if (PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
       setLoading(false)
-      setError("Por favor configura tus credenciales de EmailJS en el código.")
+      setError("Falta configurar la Public Key de EmailJS.")
       return
     }
 
