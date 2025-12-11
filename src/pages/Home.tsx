@@ -113,7 +113,7 @@ const Home = () => {
                 Nuestro equipo de expertos combina creatividad técnica con visión estratégica para entregar resultados excepcionales.
               </p>
               <ul className="space-y-4 mb-8">
-                {['Experiencia comprobada', 'Tecnología de punta', 'Soporte dedicado', 'Resultados garantizados'].map((item, index) => (
+                {['Tecnología de punta', 'Soporte dedicado', 'Resultados garantizados'].map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary-cyan rounded-full" />
                     <span className="text-white font-medium">{item}</span>
@@ -125,8 +125,12 @@ const Home = () => {
               </Link>
             </div>
             <div className="flex-1 relative">
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary-cyan/20 flex items-center justify-center bg-gradient-to-br from-[#003B4D] to-[#2E1065]">
-                <div className="text-[12rem] font-bold text-white/10 select-none">NB</div>
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-primary-cyan/20 flex items-center justify-center bg-[#050A18]">
+                <img 
+                  src="/logo.png" 
+                  alt="NEXABYTE Logo" 
+                  className="w-full h-full object-contain p-4"
+                />
               </div>
             </div>
           </div>
