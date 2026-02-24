@@ -121,9 +121,9 @@ export const supportOptions = [
 ];
 
 export const structureOptions = [
-  { id: 'sections_1_3', label: '1 a 3 Secciones', price: 50 },
-  { id: 'sections_3_5', label: '3 a 5 Secciones', price: 100 },
-  { id: 'sections_5_8', label: '5 a 8 Secciones', price: 200 },
+  { id: 'sections_1_3', label: '1 a 3 Secciones', price: 0 },
+  { id: 'sections_3_5', label: '3 a 5 Secciones', price: 50 },
+  { id: 'sections_5_8', label: '5 a 10 Secciones', price: 100 },
 ];
 
 export const imageOptions = [

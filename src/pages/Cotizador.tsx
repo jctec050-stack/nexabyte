@@ -504,7 +504,7 @@ export default function Cotizador() {
                     `}
                   >
                     <span className="block font-medium">{option.label}</span>
-                    <span className="text-sm text-text-muted">+${option.price}</span>
+                    <span className="text-sm text-text-muted">{option.price > 0 ? `+$${option.price}` : 'Incluido'}</span>
                   </button>
                 ))}
               </div>
