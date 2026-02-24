@@ -664,7 +664,7 @@ export default function Cotizador() {
                       value={selection.contact.whatsapp}
                       onChange={(e) => updateContact('whatsapp', e.target.value)}
                       className="w-full bg-background border border-white/10 rounded-lg p-3 focus:outline-none focus:border-primary-cyan transition-colors"
-                      placeholder="+58 412 1234567"
+                      placeholder="+595 976 392 214"
                     />
                   </div>
                   <div>
@@ -697,7 +697,7 @@ export default function Cotizador() {
                         `📝 *Notas Adicionales:* ${selection.contact.notes || 'Ninguna'}\n\n` +
                         `📩 *Contacto:* ${selection.contact.email}`;
                         
-                      window.open(`https://wa.me/584241234567?text=${encodeURIComponent(message)}`, '_blank');
+                      window.open(`https://wa.me/595976392214?text=${encodeURIComponent(message)}`, '_blank');
                     }}
                   >
                     <Send className="w-5 h-5" /> Enviar Cotización
