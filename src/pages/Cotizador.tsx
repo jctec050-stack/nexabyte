@@ -172,6 +172,12 @@ export default function Cotizador() {
     }
   };
 
+  const handleAutoAdvance = () => {
+    setTimeout(() => {
+      handleNext();
+    }, 400); // Pequeño delay para ver la selección
+  };
+
   const handleBack = () => {
     if (currentStep > 1) {
       setCurrentStep(prev => prev - 1);
@@ -216,7 +222,7 @@ export default function Cotizador() {
             {pageTypes.map((type) => (
               <div 
                 key={type.id}
-                onClick={() => toggleSelection('pageType', type.id, true)}
+                onClick={() => { toggleSelection('pageType', type.id, true); handleAutoAdvance(); }}
                 className={`
                   cursor-pointer p-6 rounded-xl border-2 transition-all duration-200
                   ${selection.pageType === type.id 
@@ -290,6 +296,12 @@ export default function Cotizador() {
                 </div>
               </div>
             )}
+            
+            <div className="flex justify-end pt-8">
+              <Button onClick={handleNext} className="gap-2">
+                Continuar <ChevronRight className="w-5 h-5" />
+              </Button>
+            </div>
           </div>
         );
 
@@ -363,6 +375,12 @@ export default function Cotizador() {
                   </button>
                 ))}
               </div>
+            </div>
+
+            <div className="flex justify-end pt-8">
+              <Button onClick={handleNext} disabled={!isStepValid()} className="gap-2">
+                Continuar <ChevronRight className="w-5 h-5" />
+              </Button>
             </div>
           </div>
         );
@@ -459,6 +477,12 @@ export default function Cotizador() {
                 ))}
               </div>
             </div>
+
+            <div className="flex justify-end pt-8">
+              <Button onClick={handleNext} className="gap-2">
+                Continuar <ChevronRight className="w-5 h-5" />
+              </Button>
+            </div>
           </div>
         );
 
@@ -508,6 +532,12 @@ export default function Cotizador() {
                   </button>
                 ))}
               </div>
+            </div>
+
+            <div className="flex justify-end pt-8">
+              <Button onClick={handleNext} className="gap-2">
+                Continuar <ChevronRight className="w-5 h-5" />
+              </Button>
             </div>
           </div>
         );
@@ -587,6 +617,12 @@ export default function Cotizador() {
                   ))}
                 </div>
               </div>
+            </div>
+
+            <div className="flex justify-end pt-8">
+              <Button onClick={handleNext} disabled={!isStepValid()} className="gap-2">
+                Continuar <ChevronRight className="w-5 h-5" />
+              </Button>
             </div>
           </div>
         );
@@ -780,15 +816,7 @@ export default function Cotizador() {
             <span className="text-2xl font-bold text-primary-cyan">${totalPrice}</span>
           </div>
           
-          {currentStep < steps.length ? (
-            <Button 
-              onClick={handleNext} 
-              disabled={!isStepValid()}
-              className="gap-2"
-            >
-              Siguiente <ChevronRight className="w-5 h-5" />
-            </Button>
-          ) : null}
+          {currentStep < steps.length ? null : null}
         </div>
       </div>
     </div>
