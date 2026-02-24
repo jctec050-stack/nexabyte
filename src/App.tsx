@@ -5,6 +5,7 @@ import WhatsAppButton from "@/components/ui/WhatsAppButton"
 import Home from "@/pages/Home"
 import Services from "@/pages/Services"
 import Contact from "@/pages/Contact"
+import Cotizador from "@/pages/Cotizador"
 import { useEffect } from "react"
 
 const ScrollToTop = () => {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/cotizador" element={<Cotizador />} />
           </Routes>
         </main>
         <Footer />
