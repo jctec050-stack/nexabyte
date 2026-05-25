@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer"
 import WhatsAppButton from "@/components/ui/WhatsAppButton"
 import Home from "@/pages/Home"
 import Services from "@/pages/Services"
+import Portfolio from "@/pages/Portfolio"
 import Contact from "@/pages/Contact"
 import Cotizador from "@/pages/Cotizador"
 import { useEffect } from "react"
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cotizador" element={<Cotizador />} />
           </Routes>
