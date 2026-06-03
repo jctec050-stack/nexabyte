@@ -14,6 +14,24 @@ export type PortfolioProject = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
+    id: "pagina-web-highlight",
+    title: "Pagina Web para Highlight",
+    category: "Landing Page",
+    description:
+      "Landing page para la empresa de marketing Highlight, enfocada en presentar sus servicios y reforzar su presencia digital de forma clara y atractiva.",
+    summary:
+      "Proyecto pensado para comunicar la propuesta de valor de la marca con una estructura directa, visual profesional y enfoque comercial.",
+    liveUrl: "https://www.highlight.com.py",
+    techStack: ["HTML", "CSS", "JavaScript", "Supabase"],
+    previewTitle: "Landing corporativa de marketing",
+    previewItems: [
+      "Presentacion de servicios",
+      "Estructura comercial clara",
+      "Presencia digital profesional",
+    ],
+    status: "Finalizado",
+  },
+  {
     id: "ecommerce-benmarket",
     title: "Ecommerce para Benmarket",
     category: "Ecommerce",
