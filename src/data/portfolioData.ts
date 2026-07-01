@@ -39,7 +39,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Tienda en linea para Benmarket, pensada para exhibir productos, facilitar compras y construir una experiencia de venta digital moderna.",
     summary:
       "Proyecto ecommerce en desarrollo con catalogo online, interfaz responsiva y conexion a Supabase para administrar informacion y escalabilidad.",
-    liveUrl: "https://tiendabenmarket.vercel.app/",
+    liveUrl: "https://benmarket.com.py",
     techStack: ["React", "Vite", "JavaScript", "Tailwind CSS", "Supabase"],
     previewTitle: "Tienda online moderna",
     previewItems: [
