@@ -8,9 +8,11 @@ import Portfolio from "@/pages/Portfolio"
 import Contact from "@/pages/Contact"
 import Cotizador from "@/pages/Cotizador"
 import { useEffect } from "react"
+import useGoogleAnalytics from "@/hooks/useGoogleAnalytics"
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+  useGoogleAnalytics();
 
   useEffect(() => {
     window.scrollTo(0, 0);

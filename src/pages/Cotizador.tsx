@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEO from '@/components/common/SEO';
 import { 
   Check, 
   ChevronRight, 
@@ -751,6 +752,11 @@ export default function Cotizador() {
 
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+      <SEO 
+        title="Cotizador Web Inteligente - NEXABYTE"
+        description="Calcula al instante el costo de tu proyecto web a medida. Elige hosting, dominio, funcionalidades de e-commerce, integración de pagos y más."
+        keywords="cotizador web, presupuestar pagina web, cuanto cuesta sitio web, cotizar app movil, nexabyte"
+      />
       <div className="mb-12 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">
           Cotizador de Proyectos

@@ -3,10 +3,16 @@ import { ArrowRight, Code, Database, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
 import { Link } from "react-router-dom"
+import SEO from "@/components/common/SEO"
 
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <SEO 
+        title="NEXABYTE - Soluciones Informáticas y Desarrollo Web"
+        description="Soluciones tecnológicas a tu medida. Especialistas en desarrollo web, aplicaciones móviles y base de datos de alto rendimiento."
+        keywords="nexabyte, desarrollo web, aplicaciones moviles, base de datos, software, portfolio, soluciones informaticas"
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-purple/20 via-background to-background" />

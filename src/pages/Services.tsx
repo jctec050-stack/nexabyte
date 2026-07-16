@@ -3,6 +3,7 @@ import { Code, Smartphone, Settings, Layout, ArrowRight } from "lucide-react"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Link } from "react-router-dom"
+import SEO from "@/components/common/SEO"
 
 const services = [
   {
@@ -34,6 +35,11 @@ const services = [
 const Services = () => {
   return (
     <div className="pt-24 pb-16 min-h-screen">
+      <SEO 
+        title="Servicios Tecnológicos - NEXABYTE"
+        description="Explora nuestros servicios de desarrollo web a medida, aplicaciones móviles, diseño de UI/UX y soporte técnico continuo."
+        keywords="desarrollo web, app movil, diseño UX, soporte tecnico, hosting, base de datos"
+      />
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -4,10 +4,16 @@ import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
 import { portfolioProjects } from "@/data/portfolioData"
+import SEO from "@/components/common/SEO"
 
 const Portfolio = () => {
   return (
     <div className="pt-24 pb-16 min-h-screen">
+      <SEO 
+        title="Portafolio de Proyectos - NEXABYTE"
+        description="Descubre nuestros proyectos destacados, casos de éxito y soluciones a medida en desarrollo web, móvil y sistemas informáticos."
+        keywords="proyectos web, casos de exito, portfolio programacion, paginas web realizadas, portafolio nexabyte"
+      />
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react"
 import emailjs from '@emailjs/browser'
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
+import SEO from "@/components/common/SEO"
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null)
@@ -23,14 +24,9 @@ const Contact = () => {
     const TEMPLATE_ID = "template_d2xs33f"
     const PUBLIC_KEY = "a8gXRzZvudm2wGbTq"
 
-    if (false) {
-      setLoading(false)
-      setError("Falta configurar la Public Key de EmailJS.")
-      return
-    }
-
     if (formRef.current) {
-      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
         .then(() => {
           setSuccess(true)
           formRef.current?.reset()
@@ -46,6 +42,11 @@ const Contact = () => {
 
   return (
     <div className="pt-24 pb-16 min-h-screen relative overflow-hidden">
+      <SEO 
+        title="Contacto - NEXABYTE"
+        description="Ponte en contacto con nosotros. Solicita presupuesto, consultoría o asesoramiento técnico personalizado."
+        keywords="contacto nexabyte, contratar desarrollo web, presupuesto software, soporte informatico contacto"
+      />
        {/* Background elements */}
        <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary-cyan/10 rounded-full blur-3xl -z-10" />
        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary-purple/10 rounded-full blur-3xl -z-10" />
