@@ -103,4 +103,21 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     status: "Activo",
   },
+  {
+    id: "Linktree",
+    title: "Linktree para Farmacia Do Sul",
+    category: "Linktree",
+    description: "Pagina de contactos para agregar en Instagram.",
+    summary:
+      "Proyecto pensado para centralizar enlaces y canales de contacto de Farmacia Do Sul en una sola pagina simple, clara y facil de usar desde redes sociales.",
+    liveUrl: "https://linktree-fds.netlify.app/",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    previewTitle: "Acceso rapido desde Instagram",
+    previewItems: [
+      "Enlaces de contacto centralizados",
+      "Diseno simple y directo",
+      "Experiencia agil para usuarios moviles",
+    ],
+    status: "Finalizado",
+  },
 ]
