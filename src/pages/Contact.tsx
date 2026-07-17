@@ -18,13 +18,11 @@ const Contact = () => {
     setError("")
     setSuccess(false)
 
-    // REPLACE THESE WITH YOUR ACTUAL EMAILJS SERVICE ID, TEMPLATE ID, AND PUBLIC KEY
-    // Sign up at https://www.emailjs.com/
-    const SERVICE_ID = "service_hsdjbrs"
-    const TEMPLATE_ID = "template_d2xs33f"
-    const PUBLIC_KEY = "a8gXRzZvudm2wGbTq"
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || ""
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || ""
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ""
 
-    if (formRef.current) {
+    if (formRef.current && SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
       emailjs
         .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
         .then(() => {
@@ -37,6 +35,9 @@ const Contact = () => {
         .finally(() => {
           setLoading(false)
         })
+    } else {
+      setError("La configuración de correo no está completa.")
+      setLoading(false)
     }
   }
 

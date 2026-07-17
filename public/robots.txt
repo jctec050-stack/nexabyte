@@ -1,5 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://nexabyte.com.ar/sitemap.xml
+# Sitemaps
+Sitemap: https://nexabyte-portfolio.vercel.app/sitemap.xml

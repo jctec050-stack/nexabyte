@@ -8,6 +8,7 @@ interface SEOProps {
   ogDescription?: string;
   ogImage?: string;
   ogUrl?: string;
+  schemaMarkup?: object;
 }
 
 export default function SEO({
@@ -18,6 +19,7 @@ export default function SEO({
   ogDescription,
   ogImage,
   ogUrl,
+  schemaMarkup,
 }: SEOProps) {
   useEffect(() => {
     // Actualizar el título de la página
@@ -59,7 +61,23 @@ export default function SEO({
     if (ogImage) {
       updateMetaTag("twitter:image", ogImage);
     }
-  }, [title, description, keywords, ogTitle, ogDescription, ogImage, ogUrl]);
+
+    // Manejo de Datos Estructurados JSON-LD
+    let scriptElement = document.getElementById("json-ld-schema") as HTMLScriptElement | null;
+    if (schemaMarkup) {
+      if (!scriptElement) {
+        scriptElement = document.createElement("script");
+        scriptElement.id = "json-ld-schema";
+        scriptElement.type = "application/ld+json";
+        document.head.appendChild(scriptElement);
+      }
+      scriptElement.textContent = JSON.stringify(schemaMarkup);
+    } else {
+      if (scriptElement) {
+        scriptElement.remove();
+      }
+    }
+  }, [title, description, keywords, ogTitle, ogDescription, ogImage, ogUrl, schemaMarkup]);
 
   return null;
 }
